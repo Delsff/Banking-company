@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+<img width="1872" height="900" alt="image" src="https://github.com/user-attachments/assets/0b3e14cf-7856-4c0a-b4c5-0d6cc6080166" /># 🏦 YourBank — Modern Banking Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A sleek, responsive, and modern banking platform built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion (Motion)**. Designed with clean UI component structures, interactive user workflows, and smooth reveal animations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- **Framework:** React 18+ (TypeScript)
+- **Styling:** Tailwind CSS
+- **Animations:** Motion (`motion/react`)
+- **Build Tool:** Vite
+- **Linting & Formatting:** Oxlint / Prettier
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- **Interactive Careers Section:** Display job openings dynamically with key info (location, department, responsibilities, and requirements).
+- **Application Modal:** Interactive modal allowing candidates to submit their application details seamlessly.
+- **Dynamic Application State:** Visual feedback for users after applying (`Applied ✓` status with button disabling to prevent duplicate submissions).
+- **Smooth Animations:** Scroll-triggered fade-ins, container stagger effects, and interactive hover state feedback powered by Motion.
+- **Fully Responsive:** Optimized layout across mobile, tablet, and desktop screens.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+---
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+<img width="1872" height="900" alt="Снимок экрана 2026-10-26 190315" src="https://github.com/user-attachments/assets/e48f2cdc-a1b1-440c-9bd7-7cad49f63675" />
+
+---
+
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen?style=for-the-badge&logo=netlify)](https://banking-company12.netlify.app/security)
+
