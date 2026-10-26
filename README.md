@@ -28,7 +28,7 @@ The application consists of **4 core pages**:
 
 ---
 
-<img width="1872" height="900" alt="Снимок экрана 2026-10-26 190315" src="https://github.com/user-attachments/assets/e48f2cdc-a1b1-440c-9bd7-7cad49f63675" />
+<img width="1872" height="900" alt="backing-company png" src="https://github.com/user-attachments/assets/e941f6b2-dec6-48f1-8fad-4b4b260382cd" />
 
 ---
 
