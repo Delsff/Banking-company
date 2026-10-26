@@ -1,32 +1,36 @@
-# React + TypeScript + Vite
+# 🏦 YourBank — Modern Banking Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A sleek, responsive, and modern banking platform built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion (Motion)**. Designed with clean UI component structures, interactive user workflows, and smooth reveal animations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- **Framework:** React 18+ (TypeScript)
+- **Styling:** Tailwind CSS
+- **Animations:** Motion (`motion/react`)
+- **Routing:** React Router DOM
+- **Build Tool:** Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+The application consists of **4 core pages**:
+1. **Home Page** — Welcome banners, bank overviews, and key advantages.
+2. **Careers Page** — Job openings catalog with detailed descriptions, requirements, and an interactive **Apply Modal** (with a submitted state tracker).
+3. **Login Page** — Secure user sign-in form with validation and loading states.
+4. **Register Page** — User sign-up flow with responsive design and smooth transition animations.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+### Additional Highlights:
+- **Fully Responsive:** Optimized UI for mobile phones, tablets, and desktop displays using Tailwind's fluid breakpoint system (`sm`, `md`, `lg`).
+- **Smooth Animations:** Scroll-triggered fade-ins, stagger effects, and interactive hover feedback powered by `motion/react`.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+<img width="1872" height="900" alt="Снимок экрана 2026-10-26 190315" src="https://github.com/user-attachments/assets/e48f2cdc-a1b1-440c-9bd7-7cad49f63675" />
+
+---
+
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen?style=for-the-badge&logo=netlify)](https://banking-company12.netlify.app/)
+
