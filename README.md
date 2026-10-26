@@ -1,4 +1,4 @@
-<img width="1872" height="900" alt="image" src="https://github.com/user-attachments/assets/0b3e14cf-7856-4c0a-b4c5-0d6cc6080166" /># 🏦 YourBank — Modern Banking Web Application
+# 🏦 YourBank — Modern Banking Web Application
 
 A sleek, responsive, and modern banking platform built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion (Motion)**. Designed with clean UI component structures, interactive user workflows, and smooth reveal animations.
 
@@ -9,18 +9,22 @@ A sleek, responsive, and modern banking platform built with **React**, **TypeScr
 - **Framework:** React 18+ (TypeScript)
 - **Styling:** Tailwind CSS
 - **Animations:** Motion (`motion/react`)
+- **Routing:** React Router DOM
 - **Build Tool:** Vite
-- **Linting & Formatting:** Oxlint / Prettier
 
 ---
 
 ## Features
 
-- **Interactive Careers Section:** Display job openings dynamically with key info (location, department, responsibilities, and requirements).
-- **Application Modal:** Interactive modal allowing candidates to submit their application details seamlessly.
-- **Dynamic Application State:** Visual feedback for users after applying (`Applied ✓` status with button disabling to prevent duplicate submissions).
-- **Smooth Animations:** Scroll-triggered fade-ins, container stagger effects, and interactive hover state feedback powered by Motion.
-- **Fully Responsive:** Optimized layout across mobile, tablet, and desktop screens.
+The application consists of **4 core pages**:
+1. **Home Page** — Welcome banners, bank overviews, and key advantages.
+2. **Careers Page** — Job openings catalog with detailed descriptions, requirements, and an interactive **Apply Modal** (with a submitted state tracker).
+3. **Login Page** — Secure user sign-in form with validation and loading states.
+4. **Register Page** — User sign-up flow with responsive design and smooth transition animations.
+
+### Additional Highlights:
+- **Fully Responsive:** Optimized UI for mobile phones, tablets, and desktop displays using Tailwind's fluid breakpoint system (`sm`, `md`, `lg`).
+- **Smooth Animations:** Scroll-triggered fade-ins, stagger effects, and interactive hover feedback powered by `motion/react`.
 
 ---
 
