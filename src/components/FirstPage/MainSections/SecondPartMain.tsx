@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { container, fadeUp } from '../../RevealAnimation/animations';
+
 const tabs = [
   {
     name: 'Online Banking',
@@ -70,7 +71,7 @@ const tabs = [
 const ArrowIcon = () => (
   <svg
     viewBox='0 0 24 24'
-    className='h-6 w-6 shrink-0 text-lime-300'
+    className='h-6 w-6 shrink-0 text-lime-300 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1'
     fill='none'
     stroke='currentColor'
     strokeWidth='1.5'
@@ -84,6 +85,7 @@ const ArrowIcon = () => (
 
 export const SecondPartMain = () => {
   const [active, setActive] = useState(0);
+
   return (
     <motion.section
       variants={container}
@@ -97,21 +99,29 @@ export const SecondPartMain = () => {
       </motion.h2>
       <motion.p
         variants={fadeUp}
-        className='mt-2 max-w-2xl font-sans text-base font-light text-white/80 '
+        className='mt-2 max-w-2xl font-sans text-base font-light text-white/85'
       >
         Experience a host of powerful features at YourBank, including seamless online banking,
         secure transactions, and personalized financial insights, all designed to enhance your
         banking experience
       </motion.p>
       <div className='grid grid-cols-1 gap-6 lg:grid-cols-[260px_1fr] mt-15'>
-        <motion.div className='flex flex-col gap-2 overflow-x-auto rounded-2xl bg-white/5 p-4  lg:self-start'>
+        <motion.div
+          variants={fadeUp}
+          className='flex flex-row lg:flex-col gap-3 overflow-x-auto rounded-2xl bg-white/5 p-4 lg:self-start border border-white/10 backdrop-blur-md'
+        >
           {tabs.map((tab, i) => (
             <button
               key={tab.name}
               onClick={() => setActive(i)}
               type='button'
               role='tab'
-              className={`h-12 shrink-0 cursor-pointer rounded-full border px-6 font-sans hover:bg-white/10 text-base transition-colors ${active === i ? 'border-white/10  text-lime-300' : 'border-white/5 bg-black/20 text-white hover:bg-black/40'}`}
+              aria-selected={active === i}
+              className={`h-12 shrink-0 cursor-pointer rounded-full px-6 font-sans text-base transition-all duration-300 ${
+                active === i
+                  ? 'bg-lime-300 text-black font-medium shadow-lg shadow-lime-300/10'
+                  : 'bg-black/20 text-white hover:bg-white/10 border border-white/5'
+              }`}
             >
               {tab.name}
             </button>
@@ -120,24 +130,28 @@ export const SecondPartMain = () => {
         <AnimatePresence mode='wait'>
           <motion.div
             key={active}
-            variants={container}
-            initial='hidden'
-            animate='show'
-            exit={{ opacity: 0, y: -12, transition: { duration: 0.2 } }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
             className='grid grid-cols-1 gap-6 md:grid-cols-2'
           >
-            {tabs[active].cards.map((card) => (
+            {tabs[active].cards.map((card, idx) => (
               <motion.article
                 key={card.title}
-                variants={fadeUp}
-                whileHover={{ y: -4 }}
-                className='flex min-h-44 flex-col gap-6 rounded-2xl border border-white/5 bg-white/5 p-5 sm:p-8'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: idx * 0.08, ease: 'easeOut' }}
+                whileHover={{ y: -6, borderColor: 'rgba(190, 242, 100, 0.4)' }}
+                className='group flex min-h-44 flex-col gap-6 rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-8 backdrop-blur-md transition-colors cursor-default'
               >
                 <div className='flex items-center justify-between gap-4'>
                   <h3 className='font-sans text-xl font-medium text-white'>{card.title}</h3>
                   <ArrowIcon />
                 </div>
-                <p className='font-sans text-base font-light text-white/60'>{card.text}</p>
+                <p className='font-sans text-base font-light text-white/70 leading-relaxed'>
+                  {card.text}
+                </p>
               </motion.article>
             ))}
           </motion.div>

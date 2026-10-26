@@ -86,30 +86,34 @@ export const ThreePartMain = () => {
                 transition={{
                   duration: 0.5,
                   ease: 'easeOut',
-                  delay: i < INITIAL_COUNT ? 0 : (i - INITIAL_COUNT) * 0.12,
+                  delay: i < INITIAL_COUNT ? 0 : (i - INITIAL_COUNT) * 0.1,
                 }}
-                className='flex w-full flex-col rounded-2xl border border-white/5 bg-white/5'
+                whileHover={{ y: -4, borderColor: 'rgba(190, 242, 100, 0.3)' }}
+                className='flex w-full flex-col rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md transition-colors overflow-hidden'
               >
                 <h3 className='p-5 font-sans text-lg font-medium text-white sm:p-8'>
                   {item.question}
                 </h3>
-                <div className='h-px w-full bg-white/5'></div>
-                <p className='p-5 font-sans font-light text-white/80 sm:p-8'>{item.answer}</p>
+                <div className='h-px w-full bg-white/10'></div>
+                <p className='p-5 font-sans font-light text-white/70 sm:p-8 leading-relaxed'>
+                  {item.answer}
+                </p>
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
-        <motion.button
-          type='button'
-          variants={fadeUp}
-          onClick={() => setShowAll((s) => !s)}
-          aria-expanded={showAll}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className='m-auto mt-10 flex h-15 w-55 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-white/5 font-sans text-base font-medium text-white backdrop-blur-md hover:bg-white/10'
-        >
-          {showAll ? 'Show Less' : 'Load All FAQ’s'}
-        </motion.button>
+        <motion.div variants={fadeUp} className='flex justify-center mt-10'>
+          <motion.button
+            type='button'
+            onClick={() => setShowAll((s) => !s)}
+            aria-expanded={showAll}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className='flex h-15 w-55 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-white/5 font-sans text-base font-medium text-white backdrop-blur-md hover:bg-white/10 transition-colors'
+          >
+            {showAll ? 'Show Less' : 'Load All FAQ’s'}
+          </motion.button>
+        </motion.div>
       </motion.section>
       <section className='mx-auto mt-40 w-full max-w-330 px-5'>
         <motion.div

@@ -2,7 +2,7 @@ import { FirstPartMain } from './MainSections/FirstPartMain';
 import { SecondPartMain } from './MainSections/SecondPartMain';
 import { ThreePartMain } from './MainSections/ThreePartMain';
 import { AnimatePresence, motion } from 'motion/react';
-import { container, fadeUp, Reveal } from '../RevealAnimation/animations';
+import { container, fadeUp } from '../RevealAnimation/animations';
 import { useState } from 'react';
 
 type Tab = 'individuals' | 'businesses';
@@ -111,12 +111,8 @@ export const MainHome = () => {
           </motion.section>
         </AnimatePresence>
       </div>
-      <Reveal>
-        <FirstPartMain />
-      </Reveal>
-      <Reveal>
-        <SecondPartMain />
-      </Reveal>
+      <FirstPartMain />
+      <SecondPartMain />
       <ThreePartMain />
     </main>
   );
