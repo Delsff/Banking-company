@@ -32,5 +32,5 @@ The application consists of **4 core pages**:
 
 ---
 
-[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen?style=for-the-badge&logo=netlify)](https://banking-company12.netlify.app/security)
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen?style=for-the-badge&logo=netlify)](https://banking-company12.netlify.app/)
 
